@@ -58,7 +58,10 @@
 - Pagination for long book lists
 
 ## Screenshots 📸
-_Add some screenshots of the project in action!_
+![image](https://github.com/user-attachments/assets/e73f4868-9168-40b8-a8e2-2ad43e166320)
+
+https://github.com/user-attachments/assets/3505d345-c3bc-4850-b4e2-e31796da2f18
+
 
 
 ## Contact 📧
