@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book List</title>
+    <!-- Google Fonts for better typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #4a90e2;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        ul li {
+            background-color: #fff;
+            margin: 10px 0;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        ul li a {
+            text-decoration: none;
+            color: #4a90e2;
+            font-weight: 500;
+        }
+        ul li a:hover {
+            color: #ffcd3c;
+        }
+        ul li .actions {
+            font-size: 0.9em;
+            color: #666;
+        }
+        ul li .actions a {
+            margin-left: 10px;
+            text-decoration: none;
+            color: #4a90e2;
+        }
+        ul li .actions a:hover {
+            color: #e94e77;
+        }
+        .add-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #4a90e2;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+            max-width: 200px;
+        }
+        .back-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: red;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+            max-width: 200px;
+        }
+        .add-button:hover {
+            background-color: #ffcd3c;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Book List</h1>
+
+    <ul>
+        {% for book in books %}
+        <li>
+            <span><a href="{% url 'book_detail' book.pk %}">{{ book.title }}</a></span>
+            <span class="actions">
+                (<a href="{% url 'book_update' book.pk %}">edit</a>,
+                <a href="{% url 'book_delete' book.pk %}">delete</a>)
+            </span>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'book_create' %}" class="add-button">Add a new book</a>
+    <a href="{% url 'book' %}" class="back-button">Back To Home</a>
+</body>
+</html>

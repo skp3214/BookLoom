@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Book Loom{% endblock %}
+
+{% block content %}
+    <h2>Welcome to Book Loom</h2>
+    <p>This is the home page.</p>
+
+    <section style="margin-top: 40px;">
+        <h3>Featured Books</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+            <div style="border: 1px solid #ddd; border-radius: 10px; padding: 20px; background-color: #fff;">
+                <h4 style="margin: 0; font-size: 1.5em; color: #4a90e2;">How to be a Good Coder</h4>
+                <p style="margin: 10px 0;">Author: John Doe</p>
+                <p style="margin: 10px 0; color: #666;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tincidunt metus sit amet ligula euismod, a pharetra libero varius.</p>
+            </div>
+        </div>
+    </section>
+{% endblock %}

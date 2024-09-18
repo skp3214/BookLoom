@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ book.title }}</title>
+    <!-- Google Fonts for better typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .book-detail {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+        h1 {
+            color: #4a90e2;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+        .actions {
+            margin-top: 20px;
+        }
+        a {
+            text-decoration: none;
+            padding: 10px 15px;
+            margin: 5px;
+            color: #fff;
+            background-color: #4a90e2;
+            border-radius: 5px;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+        a:hover {
+            background-color: #ffcd3c;
+        }
+        .back-link {
+            background-color: #e94e77;
+        }
+        .back-link:hover {
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="book-detail">
+        <h1>{{ book.title }}</h1>
+        <p><strong>Author:</strong> {{ book.author }}</p>
+        <p><strong>Published Date:</strong> {{ book.published_date }}</p>
+
+        <div class="actions">
+            <a href="{% url 'book_update' book.pk %}">Edit</a>
+            <a href="{% url 'book_delete' book.pk %}">Delete</a>
+            <a href="{% url 'book_list' %}" class="back-link">Back to Book List</a>
+        </div>
+    </div>
+</body>
+</html>
