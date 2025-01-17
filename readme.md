@@ -19,7 +19,7 @@
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/your-username/bookloom.git
+    git clone https://github.com/skp3214/bookloom.git
     cd bookloom
     ```
 
