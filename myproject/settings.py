@@ -28,6 +28,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['bookloom.onrender.com', '127.0.0.1', 'localhost']
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://bookloom.onrender.com',
+]
+
 
 # Application definition
 
