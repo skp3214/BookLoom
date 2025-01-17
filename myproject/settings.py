@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-cv_qr2237)pa5)+4v8u3jc*x2j^+1g4y&ca&!(m10h+stxvg^z
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['bookloom.onrender.com', '127.0.0.1', 'localhost']
 
 
 # Application definition
